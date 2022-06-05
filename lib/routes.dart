@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies/home.dart';
-import 'package:movies/movies.dart';
+
+import 'home.dart';
+import 'movies.dart';
 
 class Routers {
   static const String login = 'login';

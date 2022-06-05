@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies/routes.dart';
+
+import 'routes.dart';
 
 
 void main() {
