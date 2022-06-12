@@ -7,7 +7,7 @@ class InternationalizationModel {
   String singUp = "";
   String yourEmail = "";
   String login = "";
-  InternationalizationModel({singUp, yourEmail, welcomeODisk,login});
+  InternationalizationModel({singUp, yourEmail, welcomeODisk, login});
 
   InternationalizationModel.fromJson(Map<String, dynamic> json) {
     welcomeODisk = json["welcomeODisk"];

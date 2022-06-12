@@ -29,7 +29,7 @@ class LoginAndSignupBtn extends StatelessWidget {
               );
             },
             child: Text(
-               context.watch<LangueProvider>().local.welcomeODisk,
+               context.watch<LangueProvider>().local.login,
             ),
           ),
         ),
@@ -48,7 +48,7 @@ class LoginAndSignupBtn extends StatelessWidget {
           style: ElevatedButton.styleFrom(
               primary: primaryLightColor, elevation: 0),
           child: Text(
-            "Sign Up".toUpperCase(),
+            context.watch<LangueProvider>().local.singUp,
             style: TextStyle(color: Colors.black),
           ),
         ),

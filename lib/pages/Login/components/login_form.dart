@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_owner_drive/i18n/langue_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
@@ -20,7 +22,7 @@ class LoginForm extends StatelessWidget {
             cursorColor: primaryColor,
             onSaved: (email) {},
             decoration: InputDecoration(
-              hintText: "Your email",
+              hintText: context.watch<LangueProvider>().local.yourEmail,
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
@@ -34,7 +36,7 @@ class LoginForm extends StatelessWidget {
               obscureText: true,
               cursorColor: primaryColor,
               decoration: InputDecoration(
-                hintText: "Your password",
+                hintText: "输入密码",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
@@ -48,7 +50,7 @@ class LoginForm extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               child: Text(
-                "Login".toUpperCase(),
+                context.watch<LangueProvider>().local.login,
               ),
             ),
           ),

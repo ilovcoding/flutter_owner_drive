@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_owner_drive/i18n/langue_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
@@ -20,7 +22,7 @@ class SignUpForm extends StatelessWidget {
             cursorColor: primaryColor,
             onSaved: (email) {},
             decoration: InputDecoration(
-              hintText: "Your email",
+              hintText: "你的邮箱",
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
@@ -34,7 +36,7 @@ class SignUpForm extends StatelessWidget {
               obscureText: true,
               cursorColor: primaryColor,
               decoration: InputDecoration(
-                hintText: "Your password",
+                hintText: "你的密码",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
@@ -45,7 +47,7 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: defaultPadding / 2),
           ElevatedButton(
             onPressed: () {},
-            child: Text("Sign Up".toUpperCase()),
+            child: Text(context.read<LangueProvider>().local.singUp),
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
