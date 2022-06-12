@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_owner_drive/themes/default_theme.dart';
 
 import 'routes.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: "/",
+      title: 'Owner Drive',
+      initialRoute: Routers.login,
       routes: Routers.getRouters(context),
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: defaultTheme,
     );
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import 'Pages/Welcome/welcome_screen.dart';
+import 'Pages/Home/home.dart';
 import 'movies.dart';
 
 class Routers {
-  static const String login = 'login';
+  static const String login = '/login';
   static const String oaLogin = '/oalogin';
   static const String home = '/';
   static const String course = '/course';
@@ -19,11 +20,11 @@ class Routers {
   static const String querybooks = '/working/queryinfo';
   static const String movies = "/movies";
 
-  static getRouters(BuildContext context){
-  return {
-    home :(context) => const MyHomePage(title: '测试首页'), 
-    movies: (context)=> const Movies(),
-  };
+  static getRouters(BuildContext context) {
+    return {
+      login: (context) => const WelcomeScreen(),
+      home: (context) => const MyHomePage(title: '测试首页'),
+      movies: (context) => const Movies(),
+    };
+  }
 }
-}
-
