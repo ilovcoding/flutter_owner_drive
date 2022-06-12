@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_owner_drive/constants.dart';
+import 'package:provider/provider.dart';
 
+import '../../../i18n/langue_provider.dart';
 import '../../Login/login_screen.dart';
 import '../../Signup/signup_screen.dart';
 
@@ -27,7 +29,7 @@ class LoginAndSignupBtn extends StatelessWidget {
               );
             },
             child: Text(
-              "Login".toUpperCase(),
+               context.watch<LangueProvider>().local.welcomeODisk,
             ),
           ),
         ),

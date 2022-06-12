@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
+import '../../../i18n/langue_provider.dart';
 
 class LoginScreenTopImage extends StatelessWidget {
   const LoginScreenTopImage({
@@ -13,7 +15,7 @@ class LoginScreenTopImage extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "LOGIN",
+           context.watch<LangueProvider>().local.login,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         SizedBox(height: defaultPadding * 2),

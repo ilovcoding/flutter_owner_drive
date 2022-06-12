@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_owner_drive/i18n/langue_provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 
@@ -13,7 +15,7 @@ class WelcomeImage extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "WELCOME TO EDU",
+          context.watch<LangueProvider>().local.welcomeODisk,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         SizedBox(height: defaultPadding * 2),
