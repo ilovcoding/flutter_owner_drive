@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_owner_drive/i18n/langue_provider.dart';
+import 'package:flutter_owner_drive/utils/toast.dart';
 import 'package:provider/provider.dart';
 
-import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
-import '../../Signup/signup_screen.dart';
+import 'socal_sign_up.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -23,8 +23,8 @@ class LoginForm extends StatelessWidget {
             onSaved: (email) {},
             decoration: InputDecoration(
               hintText: context.watch<LangueProvider>().local.yourEmail,
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(defaultPadding),
+              prefixIcon: const Padding(
+                padding: EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
               ),
             ),
@@ -35,10 +35,10 @@ class LoginForm extends StatelessWidget {
               textInputAction: TextInputAction.done,
               obscureText: true,
               cursorColor: primaryColor,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "输入密码",
                 prefixIcon: Padding(
-                  padding: const EdgeInsets.all(defaultPadding),
+                  padding: EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
                 ),
               ),
@@ -48,25 +48,16 @@ class LoginForm extends StatelessWidget {
           Hero(
             tag: "login_btn",
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                ShowToast.info("功能开发中");
+              },
               child: Text(
                 context.watch<LangueProvider>().local.login,
               ),
             ),
           ),
           const SizedBox(height: defaultPadding),
-          AlreadyHaveAnAccountCheck(
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SignUpScreen();
-                  },
-                ),
-              );
-            },
-          ),
+          const SocalSignUp()
         ],
       ),
     );
