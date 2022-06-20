@@ -18,7 +18,9 @@ class SocalSignUp extends StatelessWidget {
           children: <Widget>[
             SocalIcon(
               iconSrc: "assets/icons/github.svg",
-              press: () {},
+              press: () {
+                // https://github.com/login/oauth/authorize?client_id=692f56c41788115afeaa&scope=public_repo
+              },
             ),
             // SocalIcon(
             //   iconSrc: "assets/icons/google-plus.svg",
